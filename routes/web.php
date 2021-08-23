@@ -28,4 +28,7 @@ Auth::routes();
 
 
 
-Route::resource('cars', App\Http\Controllers\CarController::class);
+
+
+
+

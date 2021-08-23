@@ -76,6 +76,7 @@
 <script src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.2.1/js/dataTables.buttons.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.colVis.min.js"></script>
+<script src="http://cdn.datatables.net/plug-ins/1.10.25/i18n/French.json"></script>
 
 @yield('page_js')
 @stack('scripts')
