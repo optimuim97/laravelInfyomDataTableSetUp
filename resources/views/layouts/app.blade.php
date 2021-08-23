@@ -78,10 +78,8 @@
 <script src="https://cdn.datatables.net/buttons/1.2.1/js/buttons.colVis.min.js"></script>
 
 @yield('page_js')
+@stack('scripts')
 @yield('scripts')
-
-
-
 
 <script>
     let loggedInUser =@json(\Illuminate\Support\Facades\Auth::user());

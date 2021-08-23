@@ -26,3 +26,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 
+
+
+Route::resource('cars', App\Http\Controllers\CarController::class);
