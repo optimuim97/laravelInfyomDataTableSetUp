@@ -1,0 +1,267 @@
+section{
+    margin: 8rem 0;
+
+    @include respond (tab-port){
+        margin: 4rem 0;
+    }
+}
+
+.details--products{
+    margin: 2rem 0 8rem 0 !important;
+}
+
+.title--part{
+    
+    margin: 2rem 0 2rem 1rem;
+}
+
+.divider--part{
+    border-bottom: 4px solid $color-orange;
+    margin-bottom: 2rem;
+
+    &__title{
+        text-align: center;
+        padding: 1rem;
+        background-color: $color-orange;
+        width: 20rem;
+        margin-left: 1rem;
+
+        & p{
+            color: $color-white;
+        }
+    }
+}
+
+.moment--dealpic{
+    & img{
+        height: 30rem;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.stars{
+    & .fa-star{
+        color: #F8DA48;
+    }
+
+    & .fa-star-half-alt{
+        color: #F8DA48;
+    }
+}
+
+.img--tab{
+    margin: 2rem 0;
+    & img{
+        width: 100%;
+        height: 30rem;
+        object-fit: cover;
+    }
+}
+
+.en--stock{
+    width: 12rem;
+    padding: 1rem;
+    border-radius: 30px ;
+    text-align: center;
+    background-color: white;
+    color: green;
+    border: 1px solid green;
+}
+
+// ***************************
+
+.tips--matiere{
+
+    margin-top: 2rem;
+
+   & .form__label--matiere{
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 2rem;
+        text-align: center;
+        padding: 1rem;
+        margin: .5rem 0;
+        font-size: 1.3rem;
+    }
+    
+    & .form__radio--matiere{
+        display: none;
+    }
+    
+    
+    & .form__radio--matiere:checked + .form__label--matiere{
+        background-color:$color-white;
+        color: $color-orange;
+        border: 1px solid $color-orange;
+    }
+}
+
+// ***************************************
+.besoin{
+   width: 60%;
+   margin: 0 auto;
+
+   @include respond (tab-land){
+        width: 75%;
+   }
+
+   @include respond (tab-port){
+        width: 85%;
+    }
+
+    @include respond (phone){
+        width: 95%;
+    }
+
+    &--title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #EFF4F8;
+        border-radius: 10px;
+        padding: 2rem;
+        margin-bottom: 3rem;
+
+
+        & h1{
+            color: $color-blue;
+            @include respond (tab-port){
+                font-size: 1.8rem;
+            }
+        }
+
+        & img{
+            height: 10rem;
+
+            @include respond (tab-port){
+                height: 7rem;
+            }
+        }
+    }
+
+    &--body{
+
+   
+        background-color: $color-white;
+        padding: 4rem;
+
+        & .group--form{
+            margin-top: 2rem;
+
+            & label{
+                font-weight: bold;
+            }
+    
+            & input{
+                padding: 1.5rem;
+                width: 100%;
+                background-color: #EFF4F8;
+                border: none;
+                margin:1rem 0;
+                transition: all .3s ease-in-out;
+                border: 1px solid #EFF4F8;
+                border-radius: 10px;
+    
+                &:focus{
+                    background-color: $color-white;
+                    border: 1px solid #EFF4F8;
+                }
+            }
+    
+            & textarea{
+                padding: 1.5rem;
+                width: 100%;
+                background-color: #EFF4F8;
+                border: none;
+                height: 20rem;
+                margin:1rem 0;
+                transition: all .3s ease-in-out;
+                border: 1px solid #EFF4F8;
+                border-radius: 10px;
+    
+                &:focus{
+                    background-color: $color-white;
+                    border: 1px solid #EFF4F8;
+                    outline: none !important;
+                }
+            }
+        }
+
+       
+    }
+}
+
+// *****************************************
+.p--table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 20rem;
+    background-color: $color-white;
+    // & p{
+
+    // }
+}
+// ************************
+// animate preloader
+.preloader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: $color-white;
+    z-index: 99999;
+    overflow: hidden;
+    opacity: 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+
+
+    &-content {        
+        text-align: center;
+
+        .logo {
+            height: 10rem;
+            width: 10rem;
+            padding: 1rem;
+            animation: 3s img linear infinite;
+            border: 2px dashed $color-blue;
+            border-radius: 50%;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+// keyframes
+
+@keyframes img {
+	0% {
+		transform: scale(.8);
+        opacity: 0;
+	}
+
+    33% {
+		transform: scale(.9);
+        opacity: 1;
+	}
+
+	66% {
+		transform: scale(1);
+        opacity: 1;
+	}
+
+    100% {
+		transform: scale(.9);
+        opacity: 0;
+	}
+}

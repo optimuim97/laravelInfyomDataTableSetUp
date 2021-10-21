@@ -1,0 +1,199 @@
+.btn--orange{
+    padding: 1rem;
+    border-radius: 30px;
+    background-color: $color-orange;
+    border: 2px solid $color-orange;
+    transition: all .3s ease-in-out;
+    color: white;
+
+    &:hover{
+        background-color: $color-white;
+        border: 2px solid $color-orange;
+        color: $color-orange;
+    }
+
+    &:hover a{
+       color: $color-orange;
+    }
+    
+    & a{
+        color: $color-white;
+    }
+}
+
+.btn--white{
+    padding: 1rem ;
+    border-radius: 30px;
+    background-color: $color-white;
+    border: 2px solid $color-blue;
+    transition: all .3s ease-in-out;
+    color: $color-blue;
+
+    &:hover{
+        background-color: $color-blue;
+        border: 2px solid $color-blue;
+        color: $color-white;
+    }
+
+    &:hover a{
+       color: $color-white;
+    }
+    
+    & a{
+        color: $color-blue;
+    }
+}
+
+.btn--blue{
+    padding: 1rem ;
+    border-radius: 30px;
+    background-color: $color-blue;
+    border: 2px solid $color-blue;
+    transition: all .3s ease-in-out;
+    color: $color-white;
+
+    &:hover{
+        background-color: $color-white;
+        border: 2px solid $color-blue;
+        color: $color-blue;
+    }
+
+    &:hover a{
+       color: $color-blue;
+    }
+    
+    & a{
+        color: $color-white;
+    }
+}
+
+.btn--voirPlus{
+    padding: 1rem ;
+    border-radius: 10px;
+    background-color: $color-white;
+    border: 2px solid #ccc;
+    transition: all .3s ease-in-out;
+    color: #ccc;
+
+    &:hover{
+        background-color: #ccc;
+        border: 2px solid #ccc;
+        color: $color-white;
+    }
+
+    &:hover a{
+       color: $color-white;
+    }
+    
+    & a{
+        color: #ccc;
+    }
+}
+
+// /**************************
+
+.qty{
+    margin-top: 1.5rem;
+    & form{
+        display: flex;
+        align-items: center;
+
+        & button{
+            border-radius: 50%;
+            height: 3rem;
+            width: 3rem;
+            font-weight: bold;
+            transition: all .3s ease-in-out;
+
+            &:hover{
+                background-color: $color-blue;
+                color: $color-white;
+            }
+        }
+
+        & p{
+            height: 3rem;
+            width: 6rem;
+            // border: 1px solid #ccc;
+            text-align: center;
+            font-weight: bold;
+            margin:0 1rem ;
+            padding: .3rem;
+        }
+    }
+}
+
+// ******************************
+
+// ************************
+.buttons--connexion{
+    & button{
+        // display: flex;
+        // align-items: center;
+        width: 100%;
+        padding: 1.5rem .5rem;
+        border-radius: .5rem;
+        background-color: $color-white;
+        box-shadow: 0px 0px 9px 1px #ccc;
+        margin: 1rem 0 .5rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+
+        & img{
+            height: 2rem;
+            width: 2rem;
+        }
+
+        & i{
+            font-size: 2rem;
+            color: white;
+        }
+    }
+
+    & .btn-facebook{
+        background-color: #4781F5;
+        color: $color-white;
+    }
+
+    .btn-google{
+        & i{
+            font-size: 2rem;
+            color:$color-orange;
+        }
+    }
+}
+
+/*** Button return top ***/
+.button-return{
+    position: fixed;
+    bottom: 10rem;
+    right: 2rem;
+    background-color: $color-white;
+    border-radius:50%;
+    border: none;
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+    text-align: center;
+    transition: all .3s;
+    z-index: 2;
+    box-shadow: 0px -1px 19px -4px rgba(56, 56, 56, 0.75);
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // &:hover {
+    //     background-color: $color-red;
+    // }
+
+    & i{
+        font-size: 3rem;
+        color: $color-orange;
+    }
+
+
+    &:hover{
+        box-shadow: 8px 20px 60px -4px rgba(56, 56, 56, 0.75);
+    }
+}

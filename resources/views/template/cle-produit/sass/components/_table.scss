@@ -1,0 +1,23 @@
+.table{
+    &--part{
+        @include respond (tab-port){
+            overflow: auto !important;
+        }
+    }
+    
+    & thead{
+        background-color: #F2F2F2;
+        border-bottom: none !important;
+        
+        & th{
+            padding: 2rem;
+            color: $color-grey;
+            border-left: 1px solid #fff ;
+        }
+    }
+
+    & tbody{
+        background-color: $color-white;
+        min-height: 20rem !important;
+    }
+}

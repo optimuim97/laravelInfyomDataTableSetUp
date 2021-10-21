@@ -1,0 +1,87 @@
+
+.footer{
+    padding: 6rem 0 ;
+    background-color: #30475C;
+
+
+    & h3{
+        color: $color-white;
+        // font-weight: bold;
+        margin-bottom: 2rem;
+        font-size: 2rem !important;
+
+        @include respond (tab-land){
+            margin-bottom: 1rem;
+        }
+    }
+
+    & ul{
+        padding-left: 0 !important;
+        & li{
+            margin-bottom: 1rem;
+            font-weight: 200;
+            color: $color-white;
+
+            & a{
+                color: $color-white;
+                transition: all .3s ease-in-out;
+                font-size: 1.5rem;
+                
+
+                &:hover{
+                    color: $color-orange;
+                    text-decoration: none !important;
+                }
+            }
+        }
+    }
+
+    & p{
+        color: $color-white;
+
+        & a{
+            color: $color-orange;
+        }
+    }
+
+    & .newsletter{
+        
+        margin-top: 1.5rem;
+
+        & form{
+            display: flex;
+            align-items: center;
+        }
+
+        & input{
+            width: 75%;
+            border: none;
+            padding: 1rem;
+            border-radius: 10px 0 0 10px;
+        }
+
+        & button{
+            width: 25%;
+            border-radius: 0 10px 10px 0;
+            padding: 1rem !important;
+            border: none;
+        }
+    }
+
+    .social--icons{
+        margin-top: 1.5rem;
+        & ul{
+            display: flex;
+
+            & li{
+                margin-right: 2rem;
+            }
+        }
+    }
+
+    .col--footer{
+        @include respond (tab-land){
+            margin-bottom: 2rem;
+        }
+    }
+}

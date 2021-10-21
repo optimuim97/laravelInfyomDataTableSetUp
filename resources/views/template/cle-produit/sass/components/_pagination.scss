@@ -1,0 +1,33 @@
+.pagination{
+    height: 5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .circle{
+        background-color:white;
+        color: $color-orange;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 5px;
+        border: 1px solid $color-orange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px ;
+        transition: all .3s ease-in-out;
+    }
+      
+    & .circle:hover{
+        background-color:$color-orange;
+        cursor: pointer;
+        color: $color-white;
+    } 
+
+    & .activepag{
+        background-color:$color-orange;
+        color: $color-white;
+    }
+}

@@ -1,0 +1,31 @@
+// police
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+@import 'abstracts/utilities';
+
+
+//base
+@import 'base/animation';
+@import 'base/base';
+@import 'base/typography';
+
+// components
+@import 'components/cards';
+@import 'components/button';
+@import 'components/accordion';
+@import 'components/onglets';
+@import 'components/form';
+@import 'components/pagination';
+@import 'components/caroussel';
+@import 'components/table';
+@import 'components/modals';
+
+// layout
+@import 'layout/home';
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/footer';
+ 
