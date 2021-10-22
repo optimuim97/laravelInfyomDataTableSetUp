@@ -5,6 +5,8 @@ namespace App\Models;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
 
 /**
  * @SWG\Definition(
@@ -116,7 +118,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  *      )
  * )
  */
-class User extends Model
+class User extends Authenticatable
 {
     use SoftDeletes;
 
@@ -129,8 +131,7 @@ class User extends Model
 
 
     protected $dates = ['deleted_at'];
-
-
+    protected $appends = ['favorites'];
 
     public $fillable = [
         'first_name',
@@ -205,5 +206,9 @@ class User extends Model
         'updated_at' => 'nullable'
     ];
 
+
+    public function getFavoritesAttribute(){
+        return ProductUser::where('user_id', $this->id)->get();
+    }
     
 }

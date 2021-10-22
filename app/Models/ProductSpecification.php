@@ -116,5 +116,15 @@ class ProductSpecification extends Model
         'deleted_at' => 'nullable'
     ];
 
+    /**
+     * Get the product that owns the ProductSpecification
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
+
     
 }

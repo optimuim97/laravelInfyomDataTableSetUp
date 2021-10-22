@@ -1,7 +1,7 @@
 @extends('front_office.layouts.master')
 
 @section('title')
-
+Accueil 
 @endsection
 
 @section('content')
@@ -62,7 +62,7 @@
 
             <div class="row ">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5  moment--dealpic">
-                    <img src="icones/26df48ad541fae838b0b776fa7be2c27.png" alt="moment--dealpic" >
+                    <img src="{{ asset('front_office/assets/icones/26df48ad541fae838b0b776fa7be2c27.png') }}" alt="moment--dealpic" >
                 </div>
 
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
@@ -203,39 +203,27 @@
     <section id="news--index">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                    <div class="news--index__card">
-                        <div class="news--index__card--illustration">
-                            <img src="{{ asset('front_office/assets/images/a1371e91-5e1f-4cd8-9265-a9c57b7d39ae-620x372.png') }}" alt="news--img">
-                        </div>
 
-                        <div class="news--index__card--description">
-                            <span>19 Jan, 2018</span>
-                            <h4>Leap Motion review: A glimpse into the future of computing</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-                            <button class="btn--orange">
-                                <a href="">Read more</a>
-                            </button>
+                @foreach ($articles as $item)    
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="news--index__card">
+                            <div class="news--index__card--illustration">
+                                <img src="{{ asset('front_office/assets/images/a1371e91-5e1f-4cd8-9265-a9c57b7d39ae-620x372.png') }}" alt="news--img">
+                            </div>
+
+                            <div class="news--index__card--description">
+                                <span> {{ $item->created_at }} </span>
+                                <h4>{{  $item->title }}</h4>
+                                <p> {{ $item->description }}</p>
+                                <button class="btn--orange">
+                                    <a href="{{ route('article') }}">Read more</a>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
 
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                    <div class="news--index__card">
-                        <div class="news--index__card--illustration">
-                            <img src="{{ asset('front_office/assets/images/a1371e91-5e1f-4cd8-9265-a9c57b7d39ae-620x372.png') }}" alt="news--img">
-                        </div>
-
-                        <div class="news--index__card--description">
-                            <span>19 Jan, 2018</span>
-                            <h4>Leap Motion review: A glimpse into the future of computing</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
-                            <button class="btn--orange">
-                                <a href="">Read more</a>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+              
             </div>
         </div>
     </section>

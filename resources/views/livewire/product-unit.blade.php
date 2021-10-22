@@ -26,7 +26,7 @@
                         </a>
                     </button>
 
-                    <button class="btn--white">
+                    <button class="btn--white" wire:click.prevent='addItemToFavorites({{ $product->id }}, {{ Auth::user() != null ?  Auth::user()->id : 1}} )'>
                         <i class="far fa-heart"></i>
                     </button>
                 </div>

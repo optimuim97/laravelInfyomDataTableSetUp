@@ -23,7 +23,7 @@
             <!-- ************** -->
             <div class="navigation--top">
                 <div class="navigation--top__logo">
-                    <a href="index.html"><img src="{{ asset('front_office/assets/icones/FullColor_alter.png') }} " alt="logo"></a>
+                    <a href="{{ url('/') }}"><img src="{{ asset('front_office/assets/icones/FullColor_alter.png') }} " alt="logo"></a>
                 </div>
 
                 <div class="navigation--top__shop">
@@ -164,10 +164,13 @@
 
 
                 <ul class="list--categories">
-                    <li>
-                        <a href="filter--part.html"><i class="fas fa-columns"></i>  Système d'exploitation</a>
-                    </li>
 
+                    @foreach ($categories->take(6) as $item)
+                        <li>
+                            <a href="filter--part.html"><i class="fas fa-columns"></i>  {{ $item->name }} </a>
+                        </li>
+                    @endforeach
+{{-- 
                     <li>
                         <a href="filter--part.html"><i class="fab fa-microsoft"></i> Microsoft Office</a>
                     </li>
@@ -186,11 +189,11 @@
 
                     <li>
                         <a href="filter--part.html"> <i class="fas fa-layer-group"></i> Les packs </a>
-                    </li>
+                    </li> --}}
                 </ul>
 
                 <button class="btn--blue " >
-                   <a href="publier--besoin.html"> <i class="fas fa-pen-square"></i> &nbsp;  Publier un besoin</a>
+                   <a href="{{ url('/publier-besoin') }}"> <i class="fas fa-pen-square"></i> &nbsp;  Publier un besoin</a>
                 </button>
             </div>
         </div>

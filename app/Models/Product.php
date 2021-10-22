@@ -270,5 +270,25 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
+    /**
+     * Get all of the advantages for the Product
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function advantages()
+    {
+        return $this->hasMany(Advantage::class);
+    }
+
+    /**
+     * Get all of the product_specification for the Product
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function product_specifications()
+    {
+        return $this->hasMany(ProductSpecification::class);
+    }
+
 
 }

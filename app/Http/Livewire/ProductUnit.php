@@ -23,26 +23,30 @@ class ProductUnit extends Component
         );
 
         $this->emit('reload-navbar');
+        $this->emit('add-to-cart');
     }
 
     public function addItemToFavorites( $product_id, $user_id ){
 
         $product = Product::where('id', $product_id)->first(); 
+        $user = null;
+        
+        // if(auth()->user()){
+        //     $user = User::find($user_id);
+        // }else{
+        //      $this->emit("require-auth-user");
+        // }
 
-        if(auth()->user()){
-            $user = User::find($user_id);
-        }else{
-            $this->emit("L'utilisateur doit etre connecte pour effectuer cette action");
-        }
-
-        if($user != null){
-
+        // if($user != null){
             ProductUser::create([
-                'user_id'=> $user->id,
+                'user_id'=> $user->id ?? 1,
                 'product_id'=> $product->id,
                 'is_favorite'=> true
             ]);
-        }
+
+            $this->emit("add-to-favorites");
+
+        // }
 
     }
 

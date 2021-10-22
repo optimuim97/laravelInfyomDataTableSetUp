@@ -107,5 +107,10 @@ class AccountType extends Model
         'deleted_at' => 'nullable'
     ];
 
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
+
     
 }

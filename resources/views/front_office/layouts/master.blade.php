@@ -93,12 +93,6 @@
 <script type="text/javascript">
 
     document.addEventListener('DOMContentLoaded', function () {
-        window.livewire.on('triggerAddCart',itemId  => {
-            console.log('test');
-
-            toastr.success('Article ajouté au panier !')
-
-        });
 
         window.livewire.on('addNewLetter',itemId  => {
             console.log('test');
@@ -107,17 +101,6 @@
                 'Bien éffectué !',
                 'Votre adresse email a été ajouté à la Newletters !',
                 'success'
-            )
-
-        });
-
-        window.livewire.on('AlreadyNewLetter',itemId  => {
-            console.log('test');
-
-            Swal.fire(
-                'Bonne nouvelle!',
-                'Vous être déjà abonné à la Newletters !',
-                'info',
             )
 
         });
@@ -133,29 +116,17 @@
 
         });
 
-        window.livewire.on('triggerPasswordUpdated',itemId  => {
-            console.log('test');
 
-            toastr.success("Votre mot de passe a été mise à jour !")
-
+        window.livewire.on('add-to-cart',()  => {
+            toastr.success("Le produit a ete ajouter au panier !", "Bien effectue");
         });
 
-        window.livewire.on('triggerOldPassword',itemId  => {
-            toastr.error("Mot de passe actuel invalide.")
-
+        window.livewire.on('require-auth-user',()  => {
+            toastr.warning("L'utilisateur doit etre connecte pour effectuer cette action !", 'Oops Desole');
         });
 
-        window.livewire.on('triggerConfirmPassword',itemId  => {
-            toastr.error("Mot de passe de confirmation invalide.")
-
-        });
-
-        window.livewire.on('triggetUpdateOrderStatus',itemId  => {
-            toastr.error("Commande annulée !");
-        });
-
-        window.livewire.on('triggetRestoreOrder',itemId  => {
-            toastr.info("Commande restaurée avec succès !");
+        window.livewire.on('add-to-favorites', ()=> {
+            toastr.info("Produit ajouter aux favoris !" , " Bien Joue");
         });
 
 
@@ -202,10 +173,6 @@
 
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-
-
-
-
     <!-- GetButton.io widget -->
     <script type="text/javascript">
         (function () {
@@ -225,7 +192,6 @@
     <!-- /GetButton.io widget -->
 
     <script src={{ asset('assets/js/intlTelInput.js') }}></script>
-    {{-- <script src="toastr.js"></script> --}}
 
     <script>
         var input = document.querySelector("#phone_number");
@@ -292,13 +258,6 @@
         input.addEventListener('keyup', reset);
 
     </script>
-
-
-    <!--End of Tawk.to Script-->
-
-    @if ( (!(Request::is('checkout/show')))  ||  (!(Request::is('/'))) )
-        <script src="{{ asset('assets/js/app.js') }}"></script>
-    @endif
 
     @toastr_js
 

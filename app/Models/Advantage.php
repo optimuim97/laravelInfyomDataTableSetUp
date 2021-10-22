@@ -99,5 +99,14 @@ class Advantage extends Model
         'deleted_at' => 'nullable'
     ];
 
+    /**
+     * Get the product that owns the Advantage
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
     
 }
